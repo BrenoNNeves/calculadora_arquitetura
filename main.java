@@ -6,30 +6,49 @@ import controler.Divisao;
 import controler.Multiplica;
 
 
-public class main {
-    int n1,n2;
-    String opera;
-    Scanner ler = new Scanner(System.in);
-    n1 = ler.nextInt();
-    n2 = ler.nextInt();
-    opera = ler.nexString();
+public class Main
+{
+    public static void main(String[] args) 
+    {
+        Scanner ler = new Scanner(System.in);
+        
+        int n1,n2;
+        int res = 0;
+        String op = new String();
 
-    if (opera = '+'){
-        Soma S = new Soma();
-        S.somaNum(n1, n2);
 
-        }else if(opera = '/'){
-            Divisao D = new Divisao();
-            D.divideNum(n1, n2);
-        }else if(opera = '-'){
-            Subtrai S = new Subtrai();
-            S.subtraiNum(n1, n2);
+        System.out.println("Digite o primeiro número:");
+        n1 = ler.nextInt();
+        System.out.println("Digite a operacao (+, -, * ou /):");
+        op = ler.next();
+        System.out.println("Digite o segundo número:");
+        n2 = ler.nextInt();
 
-        }else if(opera = '*'){
-            Multiplica M = new Multiplica();
-            M.multNum(n1, n2);
-
+        switch (op)
+        {
+            case "+":
+                Soma S = new Soma();
+                res = S.somaNum(n1, n2);
+            break;
+            case "-":
+                Subtrai Su = new Subtrai();
+                res = Su.subtraiNum(n1, n2);
+            break;
+            case "*":
+                Multiplica M = new Multiplica();
+                res = M.multNum(n1, n2);
+            break;
+            case "/":
+                Divisao D = new Divisao();
+                res = D.divideNum(n1, n2);
+            break;
+            default:
+                System.out.println("Simbolo da operacao nao reconhecida.");
+                System.exit(0);
+                break;
         }
 
-    }
+        System.out.println(res); 
+        
+    }    
 }
