@@ -15,18 +15,8 @@ import demo.src.main.java.servico.Subtrai;
 public class ControleCal {
     
     
-    @GetMapping("/sum/{n1}/{n2}")
-    public double CalculaSoma(@PathVariable(value = "n1") double n1,
-                              @PathVariable(value = "n2") double n2){
-        
-        Soma calc = new Soma();
-        calc.n1 = n1;
-        calc.n2 = n2;
-        
-        return calc.cal();
-    }
 
-    @GetMapping("/sub/{n1}/{n2}")
+    @GetMapping("/subitrair/{n1}/{n2}")
     public double CalculaSub(@PathVariable(value = "n1") double n1,
                               @PathVariable(value = "n2") double n2){
         
@@ -37,18 +27,9 @@ public class ControleCal {
         return calc.cal();
     }
 
-    @GetMapping("/mult/{n1}/{n2}")
-    public double CalculaMult(@PathVariable(value = "n1") double n1,
-                              @PathVariable(value = "n2") double n2){
-        
-        Multiplica calc = new Multiplica();
-        calc.n1 = n1;
-        calc.n2 = n2;
-        
-        return calc.cal();
-    }
+    
 
-    @GetMssapping("/div/{n1}/{n2}")
+    @GetMssapping("/divisao/{n1}/{n2}")
     public double CalculaDiv(@PathVariable(value = "n1") double n1,
                               @PathVariable(value = "n2") double n2){
         
@@ -57,6 +38,29 @@ public class ControleCal {
         calc.n2 = n2;
         
         return  calc.cal();
+
+    }
+
+    @GetMapping("/soma/{n1}/{n2}")
+    public double CalculaSoma(@PathVariable(value = "n1") double n1,
+                              @PathVariable(value = "n2") double n2){
+        
+        Soma calc = new Soma();
+        calc.n1 = n1;
+        calc.n2 = n2;
+        
+        return calc.cal();
+    }
+    
+    @GetMapping("/multiplicar/{n1}/{n2}")
+    public double CalculaMult(@PathVariable(value = "n1") double n1,
+                              @PathVariable(value = "n2") double n2){
+        
+        Multiplica calc = new Multiplica();
+        calc.n1 = n1;
+        calc.n2 = n2;
+        
+        return calc.cal();
     }
     
 }
