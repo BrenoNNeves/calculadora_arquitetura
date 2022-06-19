@@ -1,12 +1,14 @@
+package demo.src.main.java.com.example;
 import java.util.Scanner;
 import java.lang.Package;
-import controler.Soma;
-import controler.Subtrai;
-import controler.Divisao;
-import controler.Multiplica;
+
+import demo.src.main.java.servico.Divisao;
+import demo.src.main.java.servico.Multiplica;
+import demo.src.main.java.servico.Soma;
+import demo.src.main.java.servico.Subtrai;
 
 
-public class Main
+public class appCal
 {
     public static void main(String[] args) 
     {
@@ -27,20 +29,25 @@ public class Main
         switch (op)
         {
             case "+":
-                Soma S = new Soma();
-                res = S.somaNum(n1, n2);
+                Soma calc = new Soma();
+                calc.n1 = n1;
+                calc.n2 = n2;
+                
             break;
             case "-":
-                Subtrai Su = new Subtrai();
-                res = Su.subtraiNum(n1, n2);
+                Subtrai calc = new Subtrai();
+                calc.n1 = n1;
+                calc.n2 = n2;
             break;
             case "*":
-                Multiplica M = new Multiplica();
-                res = M.multNum(n1, n2);
+                Multiplica calc = new Multiplica();
+                calc.n1 = n1;
+                calc.n2 = n2;
             break;
             case "/":
-                Divisao D = new Divisao();
-                res = D.divideNum(n1, n2);
+                Divisao calc = new Divisao();
+                calc.n1 = n1;
+                calc.n2 = n2;
             break;
             default:
                 System.out.println("Simbolo da operacao nao reconhecida.");
