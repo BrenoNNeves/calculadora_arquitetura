@@ -14,7 +14,6 @@ import demo.src.main.java.operacao.Subtrai;
 @RequestMapping(value = "/api/calculo")
 public class ControleCal {
     
-    
 
     @GetMapping("/subitrair/{n1}/{n2}")
     public double CalculaSub(@PathVariable(value = "n1") double n1,
