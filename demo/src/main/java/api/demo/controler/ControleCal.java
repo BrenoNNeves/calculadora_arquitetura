@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import demo.src.main.java.servico.Divisao;
-import demo.src.main.java.servico.Multiplica;
-import demo.src.main.java.servico.Soma;
-import demo.src.main.java.servico.Subtrai;
+import demo.src.main.java.operacao.Divisao;
+import demo.src.main.java.operacao.Multiplica;
+import demo.src.main.java.operacao.Soma;
+import demo.src.main.java.operacao.Subtrai;
 
 @RestController
 @RequestMapping(value = "/api/calculo")
